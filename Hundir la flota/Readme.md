@@ -39,3 +39,20 @@ flowchart TD
     I -- No --> J["Devolver contador_fila"]
     J --> K(["Fin"])
 ```
+
+### - Valor
+
+```mermaid
+flowchart TD
+    A([Inicio]) --> B{valor = 1}
+    B -->|Si| C[Devolver Submarino]
+    B -->|No| D{valor = 2}
+    D -->|Si| E[Devolver Buque]
+    D -->|No| F{valor = 4}
+    F -->|Si| G[Devolver Portaaviones]
+    F -->|No| H[Devolver Agua]
+    C --> I([Fin])
+    E --> I
+    G --> I
+    H --> I
+```
